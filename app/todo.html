@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ToDo List</title>
+  <link rel="stylesheet" href="/build/css/bootstrap.css">
+  <link rel="stylesheet" href="/build/css/font-awesome.css">
+  <link rel="stylesheet" href="/main.css">
+
+</head>
+<body id="app">
+  <nav>
+
+    <div class="logo">
+      <div>TODO</div>
+      <div class="small">Task List</div>
+    </div>
+
+    <button class="arhive" type="button" name="arhive"><span class="fa fa-history" aria-hidden="true"></span></button>
+
+    <div class="login">
+
+      <div class="dropdown">
+        <a href="" id="id" role="button" data-toggle="dropdown" data-target="dropdown">
+        <img src="" alt="" class="userImage"/>
+        <span class="userName">Root</span>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="id" >
+          <li>texts</li>
+          <li>texts</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  <div class="main-container">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="sidebar --left col-lg-3">
+
+          <div class="control-panel">
+            <a href="#/today">Сьогодні</a>
+            <a href="#/next/:day">Наступні 7 днів</a>
+          </div>
+
+          <div class="projects">
+
+            <h3 class="title">Проекти</h3>
+          <div class="project">
+            <a href="#/project/:taskId">
+              <span class="marks fa fa-star"  aria-hidden="true"></span>
+              <span class="projectName">Lesson</span>
+              <span id="countProject"></span>
+            </a>
+            <div class="dropdown">
+              <a href="" id="id" role="button" data-toggle="dropdown" data-target="dropdown">
+              <span class="fa fa-ellipsis-v"  aria-hidden="true"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="id" >
+                <li><a href="#/update/:id" class="fa fa-pencil" aria-hidden="true">Update</a></li>
+                <li><a href="#/delete/:id" class="fa fa-trash" aria-hidden="true">Delete</a></li>
+              </ul>
+            </div>
+          </div>
+
+            <button class="add" type="button"><span class="fa fa-plus"  aria-hidden="true"></span> Добавить</button>
+            <form action="#/add">
+              <input type="text" name="project" >
+              <input type="color" name="color"value="#ff0000">
+              <input type="submit" value="Добавить" class="btn-add_defult">
+              <button type="button" name="button" class="btn-add_defult">Отменить</button>
+            </form>
+          </div>
+
+        </div>
+
+        <div class="mainContent col-lg-6">
+
+          <h2 class="title">Сегодня <span class="date">07 марта</span></h2>
+
+          <div class="list-tasks">
+
+            <div class="task">
+              <a href="#/task/:taskId">
+                <span class="marks square"></span>
+                <span class="projectName">Cleane</span>
+              </a>
+
+              <div class="nameProject">
+                <span class="projectName">Lesson</span>
+                <span class="marks fa fa-star"  aria-hidden="true"></span>
+              </div>
+
+              <div class="dropdown">
+                <a href="" id="id" role="button" data-toggle="dropdown" data-target="dropdown">
+                <span class="fa fa-ellipsis-v"  aria-hidden="true"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="id" >
+                  <li><a href="#/update/:id" class="fa fa-pencil" aria-hidden="true">Update</a></li>
+                  <li><a href="#/delete/:id" class="fa fa-trash" aria-hidden="true">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="task">
+              <a href="#/task/:taskId">
+                <span class="marks square"></span>
+                <span class="projectName">Cleane</span>
+              </a>
+
+              <div class="nameProject">
+                <span class="projectName">Lesson</span>
+                <span class="marks fa fa-star"  aria-hidden="true"></span>
+              </div>
+
+              <div class="dropdown">
+                <a href="" id="id" role="button" data-toggle="dropdown" data-target="dropdown">
+                <span class="fa fa-ellipsis-v"  aria-hidden="true"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="id" >
+                  <li><a href="#/update/:id" class="fa fa-pencil" aria-hidden="true">Update</a></li>
+                  <li><a href="#/delete/:id" class="fa fa-trash" aria-hidden="true">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="task">
+              <a href="#/task/:taskId">
+                <span class="marks square"></span>
+                <span class="projectName">Cleane</span>
+              </a>
+
+              <div class="nameProject">
+                <span class="projectName">Lesson</span>
+                <span class="marks fa fa-star"  aria-hidden="true"></span>
+              </div>
+
+              <div class="dropdown">
+                <a href="" id="id" role="button" data-toggle="dropdown" data-target="dropdown">
+                <span class="fa fa-ellipsis-v"  aria-hidden="true"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="id" >
+                  <li><a href="#/update/:id" class="fa fa-pencil" aria-hidden="true">Update</a></li>
+                  <li><a href="#/delete/:id" class="fa fa-trash" aria-hidden="true">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="task">
+              <a href="#/task/:taskId">
+                <span class="marks square"></span>
+                <span class="projectName">Cleane</span>
+              </a>
+
+              <div class="nameProject">
+                <span class="projectName">Lesson</span>
+                <span class="marks fa fa-star"  aria-hidden="true"></span>
+              </div>
+
+              <div class="dropdown">
+                <a href="" id="id" role="button" data-toggle="dropdown" data-target="dropdown">
+                <span class="fa fa-ellipsis-v"  aria-hidden="true"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="id" >
+                  <li><a href="#/update/:id" class="fa fa-pencil" aria-hidden="true">Update</a></li>
+                  <li><a href="#/delete/:id" class="fa fa-trash" aria-hidden="true">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="task">
+              <a href="#/task/:taskId">
+                <span class="marks square"></span>
+                <span class="projectName">Cleane</span>
+              </a>
+
+              <div class="nameProject">
+                <span class="projectName">Lesson</span>
+                <span class="marks fa fa-star"  aria-hidden="true"></span>
+              </div>
+
+              <div class="dropdown">
+                <a href="" id="id" role="button" data-toggle="dropdown" data-target="dropdown">
+                <span class="fa fa-ellipsis-v"  aria-hidden="true"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="id" >
+                  <li><a href="#/update/:id" class="fa fa-pencil" aria-hidden="true">Update</a></li>
+                  <li><a href="#/delete/:id" class="fa fa-trash" aria-hidden="true">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+
+
+
+            <button class="add" type="button"><span class="fa fa-plus"  aria-hidden="true"></span> Добавить</button>
+            <form action="#/add">
+              <input type="text" name="project" >
+              <input type="date" name="date">
+              <select name="prioritet">
+                <option value="1">Високий</option>
+                <option value="2">Средний</option>
+                <option value="3">Низкий</option>
+              </select>
+              <select name="projects">
+                <option value="id">NameProject</option>
+                <option value="id">NameProject</option>
+              </select>
+              <input type="submit" value="Добавить" class="btn-add_defult">
+              <button type="button" name="button" class="btn-add_defult">Отменить</button>
+            </form>
+
+          </div>
+    
+        </div>
+        <div class="sidebar --right col-lg-3"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="/build/js/bootstrap.js"></script>
+</body>
+</html>
